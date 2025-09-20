@@ -23,3 +23,35 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset"; // Button type
   disabled?: boolean; // Disable state
 }
+
+/**
+ * Defines the structure for property data
+ */
+export interface PropertyProps {
+  name: string;
+  address: {
+    state: string;
+    city: string;
+    country: string;
+  };
+  rating: number;
+  category: string[];
+  price: number;
+  offers: {
+    bed: string;
+    shower: string;
+    occupants: string;
+  };
+  image: string;
+  discount: string;
+}
+
+/**
+ * Defines the props for the Pill component used in filters
+ */
+export interface PillProps {
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+  variant?: "default" | "active";
+}
